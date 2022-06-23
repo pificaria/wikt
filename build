@@ -1,0 +1,16 @@
+#!/bin/sh
+
+listAwk=$(cat list.awk)
+dictAwk=$(cat dict.awk)
+dict=$(cat wikt.skel.sh)
+
+cat << EOF
+#!/bin/sh
+
+listAwk='$listAwk'
+
+dictAwk='$dictAwk'
+
+$dict
+EOF
+
